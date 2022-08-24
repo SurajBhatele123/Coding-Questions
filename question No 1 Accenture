@@ -1,0 +1,23 @@
+// Question No 1 for Accenture placements find the nearrest number is diviable by m
+#include <iostream>
+
+using namespace std;
+
+int nearestinterger(int num , int m){
+    int r= num%m;  // find the remender of given number 
+    if(r<(m+1)/2)
+    {
+        return num-r;   // this is for smallest Number 
+    }
+        return num+(m-r);  // this is for biggest Number 
+}
+
+int main()
+{
+    int num,m;
+    cin>>num>>m;
+    int c = nearestinterger(num,m);
+    cout<<c<<endl;
+
+    return 0;
+}
