@@ -1,0 +1,15 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+ int days,m=0;
+ cin>>days;
+ 
+ for(int i=1;i<=days;i++)
+ {
+    m=m+pow(i,2);
+ }
+ cout<<"This is a Answer "<<m<<endl;
+return 0;
+}
