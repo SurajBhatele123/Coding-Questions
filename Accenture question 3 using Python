@@ -1,0 +1,10 @@
+n=int(input())                       // Number Puzzle         
+m=[]
+sum=0
+for i in range(n):
+    x=input()
+    m.append(x)
+s=sorted(m)
+for i in range(len(s)):
+    sum+=abs(int(s[i]) - int(s[i-1]))
+print(sum)
