@@ -1,0 +1,27 @@
+#include<iostream>
+#include<bits/stdc++.h>
+#include<cstring>
+using namespace std;
+
+int main()
+{   
+    string str;                  // taking a string 
+    cin>>str;                    // taking a input of string 
+    int arr[26]={0};             // create a array length 26 with value zero
+    for(int i=0;i<str.length();i++)   // iterate a loop upto length i=of string
+    {
+        arr[str[i]-97]+=1;           // store a count in array 
+    }
+    string ans="";                    // for storing the ans 
+    for(int i=0;i<26;i++)             // create a loop upto 26 
+    {
+        if(arr[i]!=0)                 // not equal zero 
+        {
+            char ch=i+97;             // find char of of array 
+            ans+=ch;                  // store ch
+            ans+=to_string(arr[i]);   // store count 
+        }
+    }
+    cout<<ans;                        // result
+    
+}
