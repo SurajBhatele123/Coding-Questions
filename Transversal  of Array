@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int  main(){
+printf("Create a Array ");
+int a[10];
+int size;
+printf("Enter a size of Array you want to :- ");
+scanf("%d",&size);
+printf("Enter a Elements of  Array ");
+for(int i=0;i<size;i++){
+    scanf("%d",&a[i]);
+}
+printf("Elements of Array are :-");
+for(int i=0;i<size;i++){
+    printf("%d \n",a[i]);
+}
+return 0;
+}
