@@ -1,0 +1,62 @@
+<script>
+  function call(){
+    var amt=Pizza.options[Pizza.selectedIndex].value * qul.value
+      var cname=Pizza.options[Pizza.selectedIndex].text
+      var pizzaImage =cimage.src=cname+".png"
+
+
+         if(qul.value == 1) {
+             result.innerHTML = `Pizza Name :- <font color="red">${Pizza.options[Pizza.selectedIndex].text}</font><br><br>
+           Pizza Price :- <font color="red">Rs ${Pizza.options[Pizza.selectedIndex].value}</font><br><br>
+           Pizza quantity :- <font color="green">${qul.value}</font><br><br>
+           Pizza Payable Amount :- <font color="green">Rs${amt}</font>`
+         }
+             else if(qul.value == 2) {
+             result.innerHTML = `Pizza Name :- <font color="red">${Pizza.options[Pizza.selectedIndex].text}</font><br><br>
+           Pizza Price :- <font color="red">Rs ${Pizza.options[Pizza.selectedIndex].value}</font><br><br>
+           Pizza quantity :- <font color="green">${qul.value}</font><br><br>
+           Pizza Payable Amount :- <font color="green">Rs${amt}</font>`
+         }
+         else if (qul.value == 3) {
+             result.innerHTML = `Pizza Name :- <font color="red">${Pizza.options[Pizza.selectedIndex].text}</font><br><br>
+           Pizza Price :- <font color="red">Rs ${Pizza.options[Pizza.selectedIndex].value}</font><br><br>
+           Pizza quantity :- <font color="green">${qul.value}</font><br><br>
+           Pizza  Amount :- <font color="red"><s>Rs ${amt}</s></font><br>
+           Discount copoun applied :- <img src="Coupon200.png " width="200"<br>
+           Payable amount :- <font color="green">${amt-200}</font><br><br>`
+         }
+         else if (qul.value == 4) {
+             result.innerHTML = `Pizza Name :- <font color="red">${Pizza.options[Pizza.selectedIndex].text}</font><br><br>
+           Pizza Price :- <font color="red">Rs ${Pizza.options[Pizza.selectedIndex].value}</font><br><br>
+           Pizza quantity :- <font color="green">${qul.value}</font><br><br>
+           Pizza  Amount :- <font color="red"><s>Rs ${amt}</s></font><br>
+           Discount copoun applied :- <img src="Coupon200.png " width="200"<br>
+           Payable amount :- <font color="green">Rs ${amt-200}</font><br><br>`
+         }
+         else if (qul.value >= 5) {
+                 result.innerHTML = `Pizza Name :- <font color="red">${Pizza.options[Pizza.selectedIndex].text}</font><br><br>
+           Pizza Price :- <font color="red">Rs ${Pizza.options[Pizza.selectedIndex].value}</font><br><br>
+           Pizza quantity :- <font color="green">${qul.value}</font><br><br>
+           Pizza  Amount :- <font color="red"><s>Rs ${amt}</s></font><br>
+           Discount copoun applied :- <img src="Coupon500.png " width="200"<br>
+           Payable amount :- <font color="green">Rs ${amt-500}</font><br><br>`
+
+         }
+  }
+
+</script>
+<html>
+<center>
+<select id="Pizza" >
+<option>-select pizza-</option>
+<option value="350">Panner onion Pizza</option>
+<option value="500">Peppy Panner Pizza</option>
+<option value="400">Veggie Paradise Pizza</option>
+<option value="450">Cheesy Pizza</option>
+</select><br><br>
+<input type="text" id="qul" placeholder="Enter No of Pizza's"><br><br>
+<input type="button" Value="Net Amount" onclick="call()"><br><br>
+    <div id="result"></div>
+    <img id="cimage" width="100"\>
+</center>
+</html>
