@@ -1,0 +1,36 @@
+<script src="JS9Homework.js"> </script>
+<html>
+  <title>Marksheet</title>
+  <body background="lightBackground.jpg"></body>
+
+  <center>
+    <h1><font color="navy">Students Record</font> </h1>
+  <b> Roll Number </b>
+  <input type="text" id="roll"  placeholder="Enter Roll Number "><br><br>
+  <b> Name </b>
+  <input type="text" id="name"  placeholder="Enter Your Name "><br><br>
+  <b> Father Name </b>
+  <input type="text" id="fname" placeholder="Enter Your Father Name "><br><br>
+    <b> Gender </b>
+  <input type="radio" id="female" name="gen" onchange="Marksheet()">Female
+  <input type="radio" id="male" name="gen" onchange="Marksheet()">Male<br><br>
+  <b> School Name </b>
+  <input type="text" id="schoolname" placeholder="Enter School Name "><br><br>
+  <b> Maths </b>
+  <input type="text" id="Math"  placeholder="Enter Your Maths Marks"><br><br>
+  <b> Physics </b>
+  <input type="text" id="Physics"  placeholder="Enter Your Physics Marks"><br><br>
+  <b> Chemistry </b>
+  <input type="text" id="Chemistry"  placeholder="Enter your chemistry Marks"><br><br>
+  <b> English </b>
+  <input type="text" id="English"  placeholder="Enter Your English Marks "><br><br>
+  <b> Hindi </b>
+  <input type="text" id="Hindi"  placeholder="Enter Your Hindi Marks "><br><br>
+
+  <input type="button" value="Submit" onclick="Marksheet()"><br><br><br><br>
+
+    <div id="result1"></div>
+
+</center>
+
+</html>
