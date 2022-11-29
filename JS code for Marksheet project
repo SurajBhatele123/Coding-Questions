@@ -1,0 +1,55 @@
+function Marksheet()
+{
+var gen=''
+    if(gen.checked){
+        gen='son'
+    }else
+    {
+        gen='Daughter'
+    }
+    var marks=[parseInt(Hindi.value),parseInt(English.value),parseInt(Math.value),parseInt(Physics.value),parseInt(Chemistry.value)]
+    var Subjects=['Hindi','English','Maths','Physics','Chemistry']
+    htm=`<table cellspacing="0" border="1" width="50%" height="50%" bgcolor="#ff8c00">`
+    htm+=`<tr><th><img src="Mpboardlogo.jpg" width="25%" height="25%"></th>`
+    htm+=`<h1> Board of Secondary Education Madhya Pradesh</h1></tr>`
+    htm+=`<tr><td><font size="5" color="red"> Roll No :- ${roll.value}</font></td></tr>`
+    htm+=`<tr><th><font size="5" color="red"> School Name :-${schoolname.value}</font></th></tr>`
+    htm+=`<tr><td><font style="color: navy"> Name :- ${name.value} ${gen} of ${fname.value}</font></td></tr>`
+    htm+=`<tr><th> Code :-</th></tr><tr><th>Min Marks :-</th></tr><tr><th>Max Marks :-</th></tr><tr><th>Obtained Marks:-</th></tr><tr><th>Remarks:-</th></tr>`
+    var total=0
+    var count=0
+    var remarks=''
+    var Fsubject=''
+    for(i=0;i<marks.length;i++){
+        if(marks[i]>=75)
+        {
+            remarks="Dis"
+        }else if (marks[i]<33){
+            remarks="Fail"
+            Fsubject=Subjects[i]+","
+            count++
+        }else
+        {
+            remarks="Pass"
+        }
+        total+=marks[i]
+        htm+=`<tr><td>${i}</td></tr><tr><td>${33}</td></tr><tr><td>${100}</td></tr><tr><td>${marks[i]}</td></tr><tr><td>${remarks}</td></tr>`
+    }
+
+    var percentage=parseInt(total/5)
+    var result=""
+    if(count==1 || count==2){
+        result="Supplementary"
+
+    }else if(count>2)
+    {
+        result="Fail"
+    }else
+    {
+        result="PASS"
+    }
+    htm += `<tr><th><font size="5"> Percentage :- ${percentage}</th><th><font size="5">Result : ${result}</font></th><th><font size="5"> Total :- ${total}</font></th></tr>`
+    htm+=`</table>`
+    result1.innerHTMl=htm
+
+}
