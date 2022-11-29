@@ -1,0 +1,32 @@
+<script>
+function call(){
+    grade.innerHTML=` Your Deginastion is <font color="blue">${EmplyoeeGrad.value}</font`
+
+}
+function  call1(){
+    var DA =parseFloat(salary.value*0.35)
+    var HRA = parseFloat(salary.value*0.20)
+    var PF = parseFloat(salary.value*0.12)
+    var Netsalary=parseFloat(salary.value)+parseFloat(DA)+parseFloat(HRA)+parseFloat(PF)
+    Sal.innerHTML=`Your Basic Salary is = <font color="green"> ${salary.value}</font> <br>
+     DA of Salary is 35 % = <font color="red"> ${DA}</font><br>HRA of Salary is 20%  = <font color="red"> ${HRA}</font><br>PF of Salary is 12 % = <font color="red"> ${PF}</font><br>
+     Net Salary  is = <font color="green">${Netsalary}</font><br>`
+}
+</script>
+
+<html>
+<title>Salary</title>
+<center>
+<select id="EmplyoeeGrad" onchange="call()">
+    <option>-Select Grade-</option>
+    <option>Grade I</option>
+    <option>Grade II</option>
+    <option>Grade III</option>
+</select><br><br>
+<input type="text" id="salary" placeholder="Enter Basic Salary "><br><br>
+<input type="button" value="Net Salary" onclick="call1()"><br><br>
+    <hr color="orange"><hr><hr color="green">
+<div id="grade"></div>
+<div id="Sal"></div>
+</center>
+</html>
