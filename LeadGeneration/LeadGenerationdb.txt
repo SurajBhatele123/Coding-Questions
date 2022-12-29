@@ -1,0 +1,17 @@
+Employee            Manager         Customer
+----------         ----------       ---------    
+employeeid         managerid          id
+firstname          managername        firstname
+lastname                              lastname
+dob                dob                dob
+gender             gender             gender
+emailid            emailid            emailid
+mobileno           mobileno           mobileno , alternatemobileno
+address            address            address
+state              state              state
+city               city               city
+designation
+managerid
+photograph         picture            picture
+                                      organizationname
+
